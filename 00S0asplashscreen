@@ -1,0 +1,14 @@
+#!/bin/bash
+### BEGIN INIT INFO
+# Provides:		00S0asplashscreen
+# Required-Start:
+# Required-Stop:
+# Should-Start:
+# Default-Start:	S
+# Default-Stop:
+# Short-Description: 	Custom Splashscreen
+# Description:		Show custom splashscreen on startup.
+### END INIT INFO
+
+#Script written by Mitch 6/30/16
+/usr/bin/fbi -T 1 -noverbose -a /etc/splash.png
