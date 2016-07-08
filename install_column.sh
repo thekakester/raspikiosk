@@ -139,13 +139,15 @@ grep -q -F "display_rotate=3" /boot/config.txt || echo -e "\ndisplay_rotate=3" >
 # CONFIGURE TOUCHSCREEN #
 #########################
 echo -e "{$DIV}Configuring touchscreen settings$DEF"
-grep -q -F "touchConfig.sh" /etc/init.d/rc.local || echo -e "\n/etc/init.d/touchConfig.sh" >> /etc/init.d/rc.local
-sudo cp touchConfig.sh /etc/init.d/touchConfig.sh
-sudo chmod a+x /etc/init.d/touchConfig.sh
+sleep 1
+grep -q -F "touchconfig.sh" /etc/init.d/rc.local || echo -e "\n/etc/init.d/touchconfig.sh" >> /etc/init.d/rc.local
+sudo cp touchconfig.sh /etc/init.d/touchconfig.sh
+sudo chmod a+x /etc/init.d/touchconfig.sh
 
 
 ########
 # DONE #
 ########
 echo -e "${DIV}Everything is done! Rebooting...$DEF"
-#sudo reboot
+sleep 1
+sudo reboot
